@@ -1,9 +1,8 @@
 import { Field, Formik, Form, ErrorMessage } from 'formik';
 import css from '../ContactForm/contactForm.module.css';
-import { nanoid } from 'nanoid';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsOps';
 
 const phoneRegExp = /[\d\s-]{6,10}$/;
 
@@ -27,7 +26,7 @@ export default function ContactForm() {
         number: '',
       }}
       onSubmit={(values, actions) => {
-        dispatch(addContact({ ...values, id: nanoid() }));
+        dispatch(addContact(values));
         actions.resetForm();
       }}
       validationSchema={FormValidationSchema}>

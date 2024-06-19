@@ -1,5 +1,5 @@
 .contactWrapper {
-  min-width: 260px;
+  width: 300px;
   display: flex;
   padding: 20px;
   gap: 15px;
