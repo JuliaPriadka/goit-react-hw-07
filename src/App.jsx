@@ -29,7 +29,6 @@ function App() {
           color="black"
           ariaLabel="circles-loading"
           wrapperStyle={{ display: 'flex', justifyContent: 'center' }}
-          wrapperClass=""
           visible={true}
         />
       )}
